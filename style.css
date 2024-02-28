@@ -1,0 +1,231 @@
+/*  grundlegende Stilregeln für alle Elemente OSNOVNI STILSKI PRAVILA ZA SITE ELEMENTI */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* Stile für Seitenhintergrund 
+body {
+    background-color: #5782c3;
+    background-size: 100px 100x;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+img {
+    width: 50%;
+    height: auto;
+}
+/*  Stile -Element mit der Klasse "wrapper" */
+
+.wrapper {
+    /* sodrzina na kutijata*/
+    box-sizing: content-box;
+    width: 40em;
+    padding: 2.5em 2.5em;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 0.6em;
+    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+}
+
+
+/* Stile für Container-Element mit der Klasse "game-container" */
+
+.game-container {
+    position: relative;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1em;
+}
+
+
+/* Stile für  Container-Element  Klasse "stats-container" */
+
+.stats-container {
+    text-align: right;
+    /*text desno*/
+    margin-bottom: 1.2em;
+    /*namaleno rastojanie */
+}
+
+
+/* Stile <span>-Elemente innerhalb von "stats-container" */
+
+.stats-container span {
+    font-weight: 600;
+    /*zadebelen fond*/
+}
+
+
+/* Stile Container-Elemente  Klasse "card-container" */
+
+.card-container {
+    /*KONTEJNER*/
+    position: relative;
+    width: 8em;
+    /*shirina*/
+    height: 8em;
+    /*visina*/
+    cursor: pointer;
+    /*pokazuvac, se menuva koga se dvizi nad element*/
+}
+
+
+/* Stile für Elemente mit den Klassen "card-before" und "card-after" innerhalb von "card-container" */
+
+.card-before,
+.card-after {
+    position: absolute;
+    border-radius: 5px;
+    /*agli*/
+    width: 100%;
+    /*shirina*/
+    height: 100%;
+    /*visina*/
+    display: flex;
+    /*Flex raspored*/
+    align-items: center;
+    /*Centralno poramnuvanje na sodrzina vertikalno*/
+    justify-content: center;
+    /*Centralno usoglasuvanje na sodrzina horizontalno*/
+    border: 4px solid #000000;
+    /*granica*/
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+    /*skrieno , sprecuva prikazuvanjeto na grbot vo 3D rezim */
+}
+
+
+/* Stile für Elemente mit der Klasse "card-before" */
+
+.card-before {
+    /*KARTICKA PREGLED*/
+    background-color: #3189f4;
+    font-size: 2.8em;
+    /*golemina na fond*/
+    font-weight: 600;
+    /*zdebelen fond*/
+}
+
+
+/* Stile Klasse "card-after" */
+
+.card-after {
+    background-color: #f6f7f8;
+    /*boja na pozadina*/
+    transform: rotateY(180deg);
+    /*rotacija*/
+}
+
+
+/* Stile für Elemente mit den Klassen "card-container" und "flipped" und der Klasse "card-before" im selben Container */
+
+.card-container.flipped .card-before {
+    transform: rotateY(180deg);
+    /*rotacija*/
+}
+
+
+/* Stile für Elemente mit den Klassen "card-container" und "flipped" und der Klasse "card-after" im selben Container */
+
+.card-container.flipped .card-after {
+    transform: rotateY(0deg);
+}
+
+
+/* Stile für ein Container-Element mit der Klasse "controls-container" */
+
+.controls-container {
+    position: absolute;
+    /*apsolutno pozicioniranje*/
+    display: flex;
+    /*flex raspored*/
+    align-items: center;
+    /*poramnuvanje verikalno*/
+    justify-content: center;
+    /*poramnuvanje horozontalno*/
+    flex-direction: column;
+    /*raspored na elementi vo koloni*/
+    width: 100%;
+    /*shirina*/
+    height: 100%;
+    /*visina*/
+    background-color: #556de3;
+    top: 0;
+    /*dodaj na vrvot na maticniot element*/
+}
+
+
+/* Stile für alle <button>-Elemente */
+
+button {
+    border: none;
+    /*nema granica*/
+    border-radius: 0.3em;
+    /*agli*/
+    padding: 1em 1.5em;
+    /*podesuvanje gore dole levo desno*/
+    cursor: pointer;
+    /*pokazuvac se menuva koga se dvizi na elementot*/
+}
+
+
+/* Stile für ein <button>-Element mit der ID "stop" */
+
+#stop {
+    font-size: 1.1em;
+    /*golemina na fondot*/
+    display: block;
+    /*prikazi kako blok element*/
+    margin: 1.1em auto 0 auto;
+    /*gorno rastojanie i centralni horizontalni poramnuvanje*/
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+/* Stile für <button>-Elemente innerhalb von "controls-container" */
+
+.controls-container button {
+    font-size: 1.3em;
+    /*golemina na fond*/
+    box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
+}
+
+
+/*senka*/
+
+
+/* Klasse "hide"KRIENJE ELEMENT zum Ausblenden von Elementen */
+
+.hide {
+    /*krie*/
+    display: none;
+    /*prikaz nema /
+  /* Stile für ein Element mit der ID "result" */
+    text-align: center;
+    /*poramnuvanje na tekst centar*/
+}
+
+
+/* Stile für <h2>-Elemente innerhalb von "result" */
+
+#result h2 {
+    /*rezultat*/
+    font-size: 2.5em;
+    /*goemina na fond*/
+}
+
+#result h4 {
+    font-size: 1.8em;
+    margin: 0.6em 0 1em 0;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Memory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: white;
+            /* Hintergrundfarbe auf Weiß setzen */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="logo">
+        <img src="logo.png.png" style="position: absolute; top: 400px; width: 500px; height: 500px;">
+    </div>
+    <div class="wrapper">
+        <div class="stats-container">
+            <div id="moves-count"></div>
+            <div id="time"></div>
+        </div>
+        <div class="game-container"></div>
+        <button id="stop" class="hide">New Game</button>
+    </div>
+    <div class="controls-container">
+        <p id="result"></p>
+        <button id="start">Start Game</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
